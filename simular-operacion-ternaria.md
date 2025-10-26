@@ -9,6 +9,7 @@ En VB.NET no existe directamente el operador ternario `condición ? valor_si_ver
 La función `If()` en VB.NET puede actuar como un operador ternario. Su sintaxis es:
 ```vbnet
 If(condición, valor_si_verdadero, valor_si_falso)
+```
 
 ## Ejemplo con TryParse:
 
