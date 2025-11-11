@@ -1,4 +1,4 @@
-# 🗞️ Mini-Tutorial: Convertir un DataTable a JSON en VB.NET
+# 🗞️ Convertir un DataTable a JSON en VB.NET
 
 En VB.NET, puedes convertir un objeto `DataTable` a una cadena JSON utilizando la biblioteca **Json.NET** (`Newtonsoft.Json`). Esto es útil para exportar datos, integrarte con APIs o guardar información estructurada.
 
@@ -35,15 +35,16 @@ Dim json As String = JsonConvert.SerializeObject(dataTable)
 Console.WriteLine(json)
 ```
 
-🧠 Explicación
+## 🧠 Explicación
+- `JsonConvert.SerializeObject(dataTable)` convierte el `DataTable` en una cadena **JSON**.
+- Cada fila del `DataTable` se convierte en un objeto **JSON** con las columnas como claves.
+- El resultado es un arreglo de objetos **JSON**.
 
-JsonConvert.SerializeObject(dataTable) convierte el DataTable en una cadena JSON.
-Cada fila del DataTable se convierte en un objeto JSON con las columnas como claves.
-El resultado es un arreglo de objetos JSON.
 
+## 📌 Resultado esperado
+```json
+[  {    "ID": "1",    "Nombre": "Jose"  },  {    "ID": "2",    "Nombre": "Nestor"  }]
+```
 
-📌 Resultado esperado
-JSON[  {    "ID": "1",    "Nombre": "Jose"  },  {    "ID": "2",    "Nombre": "Nestor"  }]Mostrar más líneas
-
-🧪 Tip adicional
-Si necesitas convertir solo una fila o un conjunto filtrado, puedes usar LINQ para seleccionar los datos antes de serializar.
+## 🧪 Tip adicional
+Si necesitas convertir solo una fila o un conjunto filtrado, puedes usar **LINQ** para seleccionar los datos antes de serializar.
